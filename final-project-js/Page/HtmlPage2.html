@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../style.sheet/StyleSheet2.css" rel="stylesheet" />
+    <script src="../Scripts/JavaScript2.js"></script>
+    <title>THE WAR ZONE</title>
+    <style>
+        #finish{
+            display:flow;
+            text-align:center;
+            color:#000000;
+            font-display:auto;
+            font-size:80px;
+            top:50%;
+            text-shadow:inherit;
+
+        }
+    </style>
+</head>
+<body onload="Init()">
+    <div class="block">
+        <div>Your Score:</div>
+        <span id="Points" class="points-box"></span>
+        <div>The Player:</div>
+        <span id="PlayerName"></span>
+    </div>
+
+    <div id="finish">
+    </div>
+
+    <div class="container">
+        <div class="top-row">
+            <div class="buttons">
+                <button class="button" onclick="P2toP1()">New</button>
+                <button class="button" onclick="P2toP3()">Champions Page</button>
+            </div>
+        </div>
+        <div id="score">0</div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Battle of the Planes</title>
+    <script src="../Scripts/JavaScript1.js"></script>
+
+
+    <style>
+        body {
+            background-image: url('../img/back.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #997a78;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #997a78;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        input[type="text"],
+        select {
+            width: 60%;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #997a78;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #PlayerName {
+            display: none;
+        }
+
+        .imgElements {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body onload="putNames()">
+    <div id="center" class="container">
+        <h1>Welcome to the Battle of the Planes</h1>
+
+        <br />
+
+        <span id="NameErr" class="err">Please enter a name</span>
+
+        <select id="selectName" onchange="HideText()">          
+            <option>Name</option>
+        </select>+
+
+        <br />
+        <button onclick="showText()">other</button>
+
+
+        <input id="PlayerName" type="text" value="Player 1" />
+        <br />
+
+        <div class="button">Choose the number of elements</div>
+        <br />
+
+        <input id="NumElements" type="number" min="30" max="150" value="30" step="20" />
+        <br />
+
+        <span class="exp">Choose a level</span>
+        <br />
+
+        <input id="level" type="number" min="1" max="3" value="1" />
+
+
+        <br />
+
+
+        <span id="RadioErr" class="err">יש לבחור אלמנט משחק</span>
+        <input id="pic1" type="radio" name="pic" checked="checked" onchange="RemoveImages()" /><label for="pic1">random picture</label><br />
+        <input id="pic2" type="radio" name="pic" onchange="CreateImages()" /><label for="pic2">choosing a images</label>
+        <div id="ParentImages">
+            <div id="ParentImg"></div>
+
+            <br />
+            <br />
+
+            <button onclick="goNext()">START</button>
+        </div>
+    </div>
+</body>
+</html>
+
